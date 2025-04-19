@@ -40,8 +40,7 @@ Se realizó una revisión exhaustiva de ambos documentos, comparando sección po
 | RNF2             | No Funcional       | Tiempo de arranque menor a 5 segundos.                                     | O7 - Arranque rápido para minimizar tiempo de inactividad          |
 | RNF3             | No Funcional       | Cumplimiento de estándares de seguridad para comunicación IoT.            | O8 - Seguridad en la transferencia de información                  |
 | RNF4 (v1)        | No Funcional       | Portabilidad entre microcontroladores ARM de la misma familia.             | O9 - Escalabilidad y reutilización del firmware en diferentes HW   |
-| INT-HW (v1)      | Interfaz de HW     | Conexiones con sensores, módulos de comunicación y fuente de energía.      | O1, O2 - Interacción directa con hardware del entorno industrial   |
-| INT-SW (v1)      | Interfaz de SW     | Comunicación con broker MQTT y herramientas de monitoreo.                  | O2, O8 - Integración con sistemas de monitoreo y comunicación      |
+
 
 
 **Conclusión**
