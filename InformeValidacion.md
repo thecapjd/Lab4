@@ -29,14 +29,20 @@ Se realizó una revisión exhaustiva de ambos documentos, comparando sección po
 * La eliminación del requerimiento de portabilidad en la versión 2 podría indicar un enfoque en una plataforma de hardware más específica, lo que podría simplificar el desarrollo pero reducir la flexibilidad del sistema.
 * La omisión de la sección de interfaces del sistema en la versión 2 reduce la claridad sobre cómo interactúa el firmware con el hardware y otros componentes de software. Esta falta de detalle podría generar ambigüedad durante la implementación y las pruebas.
 
-**Recomendaciones**
+| ID del Requisito | Tipo               | Descripción                                                                 | Objetivo Relacionado                                               |
+|------------------|--------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------|
+| RF1              | Funcional          | El firmware debe recolectar datos de sensores industriales en tiempo real. | O1 - Monitoreo en tiempo real del entorno industrial               |
+| RF2              | Funcional          | Debe transmitir los datos a través del protocolo MQTT.                      | O2 - Comunicación eficiente y estándar con servidores externos     |
+| RF3              | Funcional          | Debe almacenar localmente los datos en caso de falla de red.               | O3 - Tolerancia a fallos y disponibilidad de datos                 |
+| RF4              | Funcional          | El firmware debe reiniciarse automáticamente en caso de error crítico.     | O4 - Mantenimiento automático y alta disponibilidad                |
+| RF5              | Funcional          | Debe permitir la actualización OTA (Over The Air).                         | O5 - Mantenimiento remoto y actualización de funcionalidades       |
+| RNF1             | No Funcional       | El firmware debe operar con consumo energético bajo.                       | O6 - Eficiencia energética en dispositivos embebidos               |
+| RNF2             | No Funcional       | Tiempo de arranque menor a 5 segundos.                                     | O7 - Arranque rápido para minimizar tiempo de inactividad          |
+| RNF3             | No Funcional       | Cumplimiento de estándares de seguridad para comunicación IoT.            | O8 - Seguridad en la transferencia de información                  |
+| RNF4 (v1)        | No Funcional       | Portabilidad entre microcontroladores ARM de la misma familia.             | O9 - Escalabilidad y reutilización del firmware en diferentes HW   |
+| INT-HW (v1)      | Interfaz de HW     | Conexiones con sensores, módulos de comunicación y fuente de energía.      | O1, O2 - Interacción directa con hardware del entorno industrial   |
+| INT-SW (v1)      | Interfaz de SW     | Comunicación con broker MQTT y herramientas de monitoreo.                  | O2, O8 - Integración con sistemas de monitoreo y comunicación      |
 
-* **Clarificar la Razón de la Eliminación de Portabilidad:** Se debe documentar la justificación para eliminar el requerimiento de portabilidad en la versión 2. Si la intención es limitar el soporte a un subconjunto específico de microcontroladores ARM, esto debe indicarse explícitamente.
-* **Reintroducir o Refinar la Sección de Interfaces:** La sección de interfaces es crucial para la comprensión completa del sistema. Se recomienda reintroducir una sección similar en la versión 2, posiblemente con mayor detalle o un enfoque diferente, si es necesario, para reflejar mejor la arquitectura del sistema.
-* **Revisión de la Consistencia:** Asegurar la consistencia entre las versiones en términos de numeración de secciones y requisitos para evitar confusiones.
-* **Implementar Revisión entre Pares:** Realizar la sesión de revisión con compañeros para identificar inconsistencias y ambigüedades, y documentar los hallazgos.
-* **Gestionar Feedback y Ajustes:** Establecer un proceso claro para recoger el feedback de la revisión entre pares y otros stakeholders, y realizar los ajustes necesarios en el SRS.
-* **Establecer Trazabilidad:** Crear una matriz de trazabilidad para asegurar que cada requerimiento se vincule con los objetivos y necesidades del caso de estudio, y mantenerla actualizada durante el desarrollo.
 
 **Conclusión**
 
